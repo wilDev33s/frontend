@@ -1,0 +1,19 @@
+<div class="container mt-5 card">
+    <div class="card-header">
+        <h3>Autenticación de usuarios</h3>         
+    </div>
+    <div class="card-body">
+        <form [formGroup] = "miFormulario" (ngSubmit)="onSubmit()">        
+            Usuario: <input       
+            type="text"
+            class="form-control"
+            formControlName="user" required> 
+            Password: <input        
+            type="password"
+            class="form-control" required
+            formControlName="pass"> <br>
+            <button class="btn btn-primary" type="submit" [disabled]="!miFormulario.valid">Enviar</button>
+        </form>
+    </div>
+    
+</div>
